@@ -15,14 +15,15 @@ This project is about the creation of an Neural Network(CNN) to identify pneumon
 
 
 #Eigene Modul
--Neural
+
+- Neural
   Modul in welchem die Klassen für ein Neuronales Netz Implementiert sind
 
--html
+- html
   Ordner in der die Dokumentation von Neural sich befindet
   index.html = Startseite
 
--PneumoniaDetection.py
+- PneumoniaDetection.py
   Erstelltes Netz für eine PneumonieDetection
 
 - Link zu Learnset.npz: https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
