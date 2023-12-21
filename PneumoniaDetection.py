@@ -5,6 +5,13 @@ import numpy as np
 import cv2
 
 
+# confusion matrix
+from sklearn.metrics import confusion_matrix
+
+# accuracy score
+from sklearn.metrics import accuracy_score
+
+
 
 # Definieren Sie die Funktion load_images, um die Bilder und die Labels aus einer .npz-Datei zu laden
 def load_images (filename):
@@ -18,7 +25,7 @@ def load_images (filename):
   # Geben Sie die Arrays zurück
   return bilder, labels
 
-#Hier muss der Absolute Pfad der Trainingsdaten als 'npz' Datei Angegeben werden (Numpy Dateityp)
+#Hier muss der Absolute Pfad der Trainingsdaten als 'npz' Datei Angegeben werden (Numpy Dateityp) der Key für X ist 'BIlder und für label 'labels'
 X, labels = load_images('learnset.npz')
 
 test = 500
@@ -80,11 +87,22 @@ net.add(Layer.Dense(3, activation_type = 'softmax'))
 print(net.summary())
 
 
-batch_size = 8
-epochs = 10
+batch_size = 32
+epochs = 2
 lr = 0.05
 net.compile(cost_type="cross-entropy", optimizer_type="adam")
 
 
 #lerne das Netz an
 net.fit(X_train_new, Y_1hot_train, epochs, batch_size, lr, X_val, y_val)
+
+
+y_pred = model.predict(X_val, batch_size=batch_size)
+confusion_matrix(y_val, y_pred)
+
+
+
+acc = accuracy_score(y_val, y_pred)
+print('Error Rate =',round((1-acc)*100, 2))
+print('Accuracy =',round((acc)*100, 2))
+
