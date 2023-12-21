@@ -67,11 +67,11 @@ net = Network()
 net.add(net.Input(input_shape=input_shape))
 
 #CNN/Pooling Schichten
-net.add(Layer.Conv2D(32, 3, activation_type='relu'))
+net.add(Layer.Conv2D(1, 3, activation_type='relu'))
 
 net.add(Layer.Pooling2D((2,2), (2,2), pool_type='max'))
 
-net.add(Layer.Conv2D(32, 3, activation_type='relu', padding='same'))
+net.add(Layer.Conv2D(2, 3, activation_type='relu', padding='same'))
 
 net.add(Layer.Pooling2D((2,2), (1,1), pool_type='max'))
 
