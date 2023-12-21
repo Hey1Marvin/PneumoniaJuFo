@@ -7,12 +7,13 @@ This project is about the creation of an Neural Network(CNN) to identify pneumon
 - einlesen.py
     Dient zum Einlesen des Datensatzes in ein Numpy array und Speichern dieses Datensatze als 'npz' file
 - CreateNewData.py
-    Dient zum vervielfältigen des Datensatzes
+    Dient zum vervielfältigen des Datensatzes nimmt ebenfalls den Datenstz innBildform
 - Neuronal.py
     Modul zum Erstellen Neuronaler Netze
 - ErweiterungMorePatientData.py
     Implementierung der Erweiterung mit zusätzlichen Patientendaten
-
+- TestLayerNumber.py: Testen der optimalen Netzstruktur (Benötigt Datensatz als Bilder wie auf https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data erhältich)
+- 
 
 #Eigene Modul
 
@@ -26,4 +27,4 @@ This project is about the creation of an Neural Network(CNN) to identify pneumon
 - PneumoniaDetection.py
   Erstelltes Netz für eine PneumonieDetection
 
-- Link zu Learnset.npz: https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
+- Link zu Learnset.npz, diese wir für PneumoniaDetection benötigt: https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
