@@ -22,11 +22,11 @@ Im Folgenden sind die Programme zu der Seminararbeit "Pneumonia Detection mithil
 #Eigenes Modul und erstellen des Netzes
 
 - Neural
-  Modul in welchem die Klassen für ein Neuronales Netz Implementiert sind
+  Modul in welchem die Klassen für ein Neuronales Netz Implementiert sind (Kommentare wurden teilweise KI-Generiert nach dem Numpy Standard)
 
 - html
   Ordner in der die Dokumentation von Neural sich befindet
-  index.html = Startseite
+  index.html = Startseite (dies würde mit pydoc generiert)
 
 - PneumoniaDetection.py
   Erstellt ein Netz zur Pneumonia Detection mithilfe des eignen Moduls (Neural), trainiert dieses mithilfe con Learnset.npz und speicher die Parameter anschießend ab
