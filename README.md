@@ -1,21 +1,25 @@
 # PneumoniaDetection
-This project is about the creation of an Neural Network(CNN) to identify pneumonia on x-rays
+Im Folgenden sind die Programme zu der Seminararbeit "Pneumonia Detection mithilfe von CNNs" aufgelistet. Diese unterscheiden sich zu einen in Untersuchen der optimalen Strukur und das eigene Modul mit dem erstellten Netz. Aufgrund der Begrenzung des Speicherplatzes wurden hier die nur die wichtigsten Erungenschaften der Arbeit abgespeicher. Zum Beipiel die Datensätzte waren unmöglich hochzuladen, da uns kein Server mit der benötigten Speichergröße bereitstand
 
 
-#Aufbau
+#Untersuchung der optimalen Struktur
 
 - einlesen.py
     Dient zum Einlesen des Datensatzes in ein Numpy array und Speichern dieses Datensatze als 'npz' file
+  
 - CreateNewData.py
-    Dient zum vervielfältigen des Datensatzes nimmt ebenfalls den Datenstz innBildform
+    Dient zum vervielfältigen des Datensatzes nimmt ebenfalls den Datenstz inn Bildform
+  
 - Neuronal.py
     Modul zum Erstellen Neuronaler Netze
+  
 - ErweiterungMorePatientData.py
     Implementierung der Erweiterung mit zusätzlichen Patientendaten
+  
 - TestLayerNumber.py: Testen der optimalen Netzstruktur (Benötigt Datensatz als Bilder wie auf https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data erhältich)
-- 
 
-#Eigene Modul
+
+#Eigenes Modul und erstellen des Netzes
 
 - Neural
   Modul in welchem die Klassen für ein Neuronales Netz Implementiert sind
@@ -25,6 +29,9 @@ This project is about the creation of an Neural Network(CNN) to identify pneumon
   index.html = Startseite
 
 - PneumoniaDetection.py
-  Erstelltes Netz für eine PneumonieDetection
+  Erstellt ein Netz zur Pneumonia Detection mithilfe des eignen Moduls (Neural), trainiert dieses mithilfe con Learnset.npz und speicher die Parameter anschießend ab
+  
+- show ist ein Beispielprogramm, welches das gespeicherte Netz aus einer pkl Datei und kann mit diesem Netz dann Bilder aus dem Lernset oder eigene Bilder auf Pneumonie untersuchen. (Visuelle Darstellun güber Tkinter)
 
-- Link zu Learnset.npz, diese wir für PneumoniaDetection benötigt: https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
+
+- Link zu Learnset.npz, diese wir für PneumoniaDetection benötigt(Kleiner Standarddatensatz nicht der Erweiterte): https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
