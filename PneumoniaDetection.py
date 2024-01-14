@@ -5,13 +5,6 @@ import numpy as np
 import cv2
 
 
-# confusion matrix
-from sklearn.metrics import confusion_matrix
-
-# accuracy score
-from sklearn.metrics import accuracy_score
-
-
 
 # Definieren Sie die Funktion load_images, um die Bilder und die Labels aus einer .npz-Datei zu laden
 def load_images (filename):
@@ -25,7 +18,7 @@ def load_images (filename):
   # Geben Sie die Arrays zurück
   return bilder, labels
 
-#Hier muss der Absolute Pfad der Trainingsdaten als 'npz' Datei Angegeben werden (Numpy Dateityp) der Key für X ist 'BIlder und für label 'labels'
+#Hier muss der Absolute Pfad der Trainingsdaten als 'npz' Datei Angegeben werden (Numpy Dateityp)
 X, labels = load_images('learnset.npz')
 
 test = 500
@@ -67,11 +60,11 @@ net = Network()
 net.add(net.Input(input_shape=input_shape))
 
 #CNN/Pooling Schichten
-net.add(Layer.Conv2D(1, 3, activation_type='relu'))
+net.add(Layer.Conv2D(32, 3, activation_type='relu'))
 
 net.add(Layer.Pooling2D((2,2), (2,2), pool_type='max'))
 
-net.add(Layer.Conv2D(2, 3, activation_type='relu', padding='same'))
+net.add(Layer.Conv2D(32, 3, activation_type='relu', padding='same'))
 
 net.add(Layer.Pooling2D((2,2), (1,1), pool_type='max'))
 
@@ -84,25 +77,20 @@ net.add(Layer.Dense(3, activation_type = 'softmax'))
 
 
 #compiliere das Netz
-print(net.summary())
+net.summary("Pneumonia - CNN")
 
 
-batch_size = 32
-epochs = 2
+batch_size = 8
+epochs = 10
 lr = 0.05
+
 net.compile(cost_type="cross-entropy", optimizer_type="adam")
 
 
 #lerne das Netz an
 net.fit(X_train_new, Y_1hot_train, epochs, batch_size, lr, X_val, y_val)
 
+net.save("pneumoniaParameter.pkl")
 
-y_pred = model.predict(X_val, batch_size=batch_size)
-confusion_matrix(y_val, y_pred)
-
-
-
-acc = accuracy_score(y_val, y_pred)
-print('Error Rate =',round((1-acc)*100, 2))
-print('Accuracy =',round((acc)*100, 2))
-
+net.loss_plot
+net.accuracy_plot
