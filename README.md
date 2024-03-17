@@ -1,5 +1,5 @@
 # PneumoniaDetection
-Im Folgenden sind die Programme zu der Seminararbeit "Pneumonia Detection mithilfe von CNNs" aufgelistet. Diese unterscheiden sich zu einen in Untersuchen der optimalen Strukur und das eigene Modul mit dem erstellten Netz. Aufgrund der Begrenzung des Speicherplatzes wurden hier die nur die wichtigsten Erungenschaften der Arbeit abgespeicher. Zum Beipiel die Datensätzte waren unmöglich hochzuladen, da uns kein Server mit der benötigten Speichergröße bereitstand
+Im Folgenden sind die Programme zu der Seminararbeit "Pneumonia Detection mithilfe von CNNs" aufgelistet. Diese unterscheiden sich zu einen in Untersuchen der optimalen Strukur und das eigene Modul mit dem erstellten Netz. Aufgrund der Begrenzung des Speicherplatzes wurden hier die nur die wichtigsten Erungenschaften der Arbeit abgespeicher. Zum Beipiel die Datensätzte waren unmöglich hochzuladen, da uns kein Server mit der benötigten Speichergröße bereitstand. Wenn Sie mehr über unsere Arbeit erfahren wollen, so besuchen Sie doch auch unser Website unter: https://asgspez.wixsite.com/aipneumoniadetection
 
 
 #Untersuchung der optimalen Struktur
@@ -31,7 +31,7 @@ Im Folgenden sind die Programme zu der Seminararbeit "Pneumonia Detection mithil
 - PneumoniaDetection.py
   Erstellt ein Netz zur Pneumonia Detection mithilfe des eignen Moduls (Neural), trainiert dieses mithilfe con Learnset.npz und speicher die Parameter anschießend ab
   
-- show ist ein Beispielprogramm, welches das gespeicherte Netz aus einer pkl Datei und kann mit diesem Netz dann Bilder aus dem Lernset oder eigene Bilder auf Pneumonie untersuchen. (Visuelle Darstellun güber Tkinter)
+- show ist ein Beispielprogramm, welches das gespeicherte Netz aus einer pkl Datei und kann mit diesem Netz dann Bilder aus dem Lernset oder eigene Bilder auf Pneumonie untersuchen. (Visuelle Darstellun über Tkinter)
 
 
 - Link zu Learnset.npz, diese wir für PneumoniaDetection benötigt(Kleiner Standarddatensatz nicht der Erweiterte): https://drive.google.com/drive/folders/1AM_Y3XlK35g2FjpwUXRKwB1ZJp69yVPZ  
