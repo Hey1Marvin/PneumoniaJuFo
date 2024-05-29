@@ -23,13 +23,13 @@ bilder , labels = load_images('learnset.npz')
 
 
 #Erstellen des Netze aus der Gespeicherten Netzstruktur
-dat = input("absoluten Filepath der Parameterdatei(pkl) eingeben: ") #Datei in der die Netzparameter gespeichert sind
+#dat = input("absoluten Filepath der Parameterdatei(pkl) eingeben: ") #Datei in der die Netzparameter gespeichert sind
 
 model = Network()
 
-model.load('test1.pkl')
+model.load('pneumoniaParameter77.pkl')
 
-model.summary()
+model.summary("Pneumonea Detection", True)
 
 model.compile(kosten_typ="cross-entropy", optimierer_typ="adam")
 
@@ -60,6 +60,9 @@ def random_file():
     file_var.set(lab+" Nr. "+str(ind))
     label_var.set(lab)
     
+    predicted_var.set("")
+    
+    
     image = Image.fromarray(bi, 'L')
     photo = ImageTk.PhotoImage (image)
     # Zeigen Sie das Bild im Image-Widget an
@@ -78,10 +81,10 @@ def load_file ():
     # Erstellen Sie eine Tkinter-kompatible Fotoimage, die überall verwendet werden kann, wo Tkinter ein Bildobjekt erwartet
     photo = ImageTk.PhotoImage (image)
     # Zeigen Sie das Bild im Image-Widget an
-    image_widget.config (image=photo, width=imgShape[1], height=imgShape[0])
+    image_widget.config(image=photo, width=imgShape[1], height=imgShape[0])
     image_widget.image = photo
     # Zeigen Sie den Dateinamen im Label-Widget an
-    file_var.set (file_name)
+    file_var.set(file_name)
     
     setLabel()
     
